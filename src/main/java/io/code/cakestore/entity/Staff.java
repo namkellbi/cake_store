@@ -1,23 +1,23 @@
 package io.code.cakestore.entity;
 
-public class Chef {
-  private long id;
+public class Staff {
+  private int id;
   private String name;
   private String skill;
   private String image;
 
-  public Chef(long id, String name, String skill, String image) {
+  public Staff(int id, String name, String skill, String image) {
     this.id = id;
     this.name = name;
     this.skill = skill;
     this.image = image;
   }
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 

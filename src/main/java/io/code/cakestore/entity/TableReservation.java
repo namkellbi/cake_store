@@ -1,7 +1,7 @@
 package io.code.cakestore.entity;
 
 public class TableReservation {
-  private long id;
+  private int id;
   private String name;
   private String email;
   private Long phone;
@@ -10,7 +10,7 @@ public class TableReservation {
   private Long timeTable;
   private String message;
 
-  public TableReservation(long id, String name, String email, Long phone, Long numberOfGuest, Long dateTable,
+  public TableReservation(int id, String name, String email, Long phone, Long numberOfGuest, Long dateTable,
     Long timeTable, String message) {
     this.id = id;
     this.name = name;
@@ -22,11 +22,11 @@ public class TableReservation {
     this.message = message;
   }
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
