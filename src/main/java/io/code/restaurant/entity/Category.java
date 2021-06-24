@@ -1,4 +1,4 @@
-package io.code.cakestore.entity;
+package io.code.restaurant.entity;
 
 public class Category {
   private int id;
@@ -7,7 +7,7 @@ public class Category {
   private boolean is_process;
   private boolean status;
 
-  public Category(long id, String name, boolean is_menu, boolean is_process, boolean status) {
+  public Category(int id, String name, boolean is_menu, boolean is_process, boolean status) {
     this.id = id;
     this.name = name;
     this.is_menu = is_menu;
@@ -15,11 +15,11 @@ public class Category {
     this.status = status;
   }
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 

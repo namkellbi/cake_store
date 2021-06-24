@@ -1,4 +1,4 @@
-package io.code.cakestore.entity;
+package io.code.restaurant.entity;
 
 public class Image {
   private int id;
@@ -9,7 +9,7 @@ public class Image {
   private boolean status;
   private boolean is_avatar;
 
-  public Image(long id, String name, int menu_id, int product_id, int staff_id, boolean status, boolean is_avatar) {
+  public Image(int id, String name, int menu_id, int product_id, int staff_id, boolean status, boolean is_avatar) {
     this.id = id;
     this.name = name;
     this.menu_id = menu_id;
@@ -19,11 +19,11 @@ public class Image {
     this.is_avatar = is_avatar;
   }
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 

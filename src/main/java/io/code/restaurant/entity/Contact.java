@@ -1,21 +1,21 @@
-package io.code.cakestore.entity;
+package io.code.restaurant.entity;
 
 public class Contact {
-  private long id;
+  private int id;
   private Long phone;
   private String email;
 
-  public Contact(long id, Long phone, String email) {
+  public Contact(int id, Long phone, String email) {
     this.id = id;
     this.phone = phone;
     this.email = email;
   }
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 

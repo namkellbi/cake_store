@@ -1,4 +1,4 @@
-package io.code.cakestore.entity;
+package io.code.restaurant.entity;
 
 
 public class Product {
