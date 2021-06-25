@@ -1,51 +1,14 @@
-package io.code.restaurant.entity;
+package io.code.restaurant.model.request;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "table_reservation")
-public class TableReservation {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
-  @Column(name = "name")
+public class TableOrderRequest {
   private String name;
-  @Column(name = "email")
   private String email;
-  @Column(name = "phone")
   private Long phone;
-  @Column(name = "numberOfGuest")
   private Long numberOfGuest;
-  @Column(name = "dateTable")
   private Long dateTable;
-  @Column(name = "timeTable")
   private Long timeTable;
-  @Column(name = "message")
   private String message;
-
-  public TableReservation(int id, String name, String email, Long phone, Long numberOfGuest, Long dateTable,
-    Long timeTable, String message) {
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.phone = phone;
-    this.numberOfGuest = numberOfGuest;
-    this.dateTable = dateTable;
-    this.timeTable = timeTable;
-    this.message = message;
-  }
-
-  public TableReservation() {
-
-  }
-
-  public int getId() {
-    return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
-  }
 
   public String getName() {
     return name;
