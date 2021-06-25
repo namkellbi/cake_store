@@ -1,4 +1,4 @@
-package io.code.restaurant.model;
+package io.code.restaurant.util;
 
 public class ResponseData {
   protected Object data;

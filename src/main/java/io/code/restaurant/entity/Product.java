@@ -7,7 +7,7 @@ public class Product {
   private int category_id;
   private int unit_id;
   private String description;
-  private String type;
+  private int time_table_id;
   private boolean status;
 
   public int getId() {
@@ -50,12 +50,12 @@ public class Product {
     this.description = description;
   }
 
-  public String getType() {
-    return type;
+  public int getTime_table_id() {
+    return time_table_id;
   }
 
-  public void setType(String type) {
-    this.type = type;
+  public void setTime_table_id(int time_table_id) {
+    this.time_table_id = time_table_id;
   }
 
   public boolean isStatus() {
