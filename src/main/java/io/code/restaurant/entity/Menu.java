@@ -1,13 +1,26 @@
 package io.code.restaurant.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "menu")
 public class Menu {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
+  @Column(name = "product_id")
   private int product_id;
+  @Column(name = "name")
   private String name;
+  @Column(name = "price")
   private long price;
+  @Column(name = "status")
   private boolean status;
+  @Column(name = "description")
   private String description;
+  @Column(name = "sold_quantity")
   private int sold_quantity;
+  @Column(name = "best_seller")
   private boolean best_seller;
 
   public Menu(int id, int product_id, String name, long price, boolean status,
@@ -20,6 +33,10 @@ public class Menu {
     this.description = description;
     this.sold_quantity = sold_quantity;
     this.best_seller = best_seller;
+  }
+
+  public Menu() {
+
   }
 
   public int getId() {
