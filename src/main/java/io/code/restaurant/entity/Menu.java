@@ -8,8 +8,10 @@ public class Menu {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
-  @Column(name = "product_id")
-  private int product_id;
+  @Column(name = "category_id")
+  private int categoryId;
+  @Column(name = "unit_id")
+  private int unitId;
   @Column(name = "name")
   private String name;
   @Column(name = "price")
@@ -22,18 +24,10 @@ public class Menu {
   private int sold_quantity;
   @Column(name = "best_seller")
   private boolean best_seller;
+  @Column(name = "time_table_id")
+  private int time_table_id;
 
-  public Menu(int id, int product_id, String name, long price, boolean status,
-    String description, int sold_quantity, boolean best_seller) {
-    this.id = id;
-    this.product_id = product_id;
-    this.name = name;
-    this.price = price;
-    this.status = status;
-    this.description = description;
-    this.sold_quantity = sold_quantity;
-    this.best_seller = best_seller;
-  }
+
 
   public Menu() {
 
@@ -47,12 +41,28 @@ public class Menu {
     this.id = id;
   }
 
-  public int getProduct_id() {
-    return product_id;
+  public int getCategoryId() {
+    return categoryId;
   }
 
-  public void setProduct_id(int product_id) {
-    this.product_id = product_id;
+  public void setCategoryId(int categoryId) {
+    this.categoryId = categoryId;
+  }
+
+  public int getUnitId() {
+    return unitId;
+  }
+
+  public void setUnitId(int unitId) {
+    this.unitId = unitId;
+  }
+
+  public int getTime_table_id() {
+    return time_table_id;
+  }
+
+  public void setTime_table_id(int time_table_id) {
+    this.time_table_id = time_table_id;
   }
 
   public String getName() {

@@ -5,6 +5,7 @@ import io.code.restaurant.entity.Menu;
 import io.code.restaurant.entity.Staff;
 import io.code.restaurant.entity.TableReservation;
 import io.code.restaurant.model.request.TableOrderRequest;
+import io.code.restaurant.model.response.MenuResponse;
 import io.code.restaurant.util.Enums;
 import io.code.restaurant.util.ResponseData;
 import io.code.restaurant.util.ResponseMessageConstants;
@@ -79,6 +80,17 @@ public class HomeController {
       return new ResponseData(Enums.ResponseStatus.SUCCESS.getStatus(),
         ResponseMessageConstants.ORDER_TABLE_SUCCESS);
     } catch (Exception e){
+      e.printStackTrace();
+      return new ResponseData(Enums.ResponseStatus.ERROR, e.getMessage());
+    }
+  }
+
+  @GetMapping("classify-food")
+  public ResponseData classifyFoodByTime(@RequestParam(name = "id") int id){
+    try{
+      List <MenuResponse> classifyMenu = menuService.getListMenuByTime(id);
+      return new ResponseData(Enums.ResponseStatus.SUCCESS.getStatus(),classifyMenu);
+    }catch (Exception e){
       e.printStackTrace();
       return new ResponseData(Enums.ResponseStatus.ERROR, e.getMessage());
     }
