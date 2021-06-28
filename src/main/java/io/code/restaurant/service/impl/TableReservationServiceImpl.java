@@ -17,6 +17,9 @@ public class TableReservationServiceImpl implements TableReservationService {
   @Override
   public TableReservation orderTable(TableOrderRequest request) throws Exception {
     TableReservation tableReservation = new TableReservation();
+    if(request.getName() == null || request.getPhone() == null){
+      throw new Exception(ResponseMessageConstants.NAME_OR_PHONE_CANNOT_NULL);
+    }
     tableReservation.setName(request.getName());
     tableReservation.setEmail(request.getEmail());
     tableReservation.setPhone(request.getPhone());
