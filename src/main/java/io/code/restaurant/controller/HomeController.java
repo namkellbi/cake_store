@@ -3,7 +3,6 @@ package io.code.restaurant.controller;
 import io.code.restaurant.entity.Contact;
 import io.code.restaurant.entity.Menu;
 import io.code.restaurant.entity.Staff;
-import io.code.restaurant.entity.TableReservation;
 import io.code.restaurant.model.request.TableOrderRequest;
 import io.code.restaurant.model.response.MenuResponse;
 import io.code.restaurant.util.Enums;
